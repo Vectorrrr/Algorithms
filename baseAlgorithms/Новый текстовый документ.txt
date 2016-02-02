@@ -1,0 +1,27 @@
+public void qSort(int[] array, int first,int last){
+	int x=(last+first)/2;
+	int i=first;
+	int j=last;
+	do{
+		while(array[x]<array[j]){
+			--j;
+		}
+		while(array[x]>array[i]){
+			++i;			
+		}
+		if(array[i]>array[j])}{
+			int temp=array[i];
+			array[i] = array[j];
+			array[j]=temp;
+			++i;
+			--j;
+		}
+		
+	}while(i<=j);
+	if(i<last){
+		qSort(array,i,last);
+	}
+	if(j>first){
+		qSort(array,first,j);
+	}
+}
